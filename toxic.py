@@ -137,8 +137,7 @@ def start_command(message):
     if str(message.chat.id) in admin_id:
         markup.add(admin_panel_button)
     markup.add(attack_button, myinfo_button, redeem_button,  bot_sitting_button)
-    bot.reply_to(message, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗩𝗘𝗡𝗢𝗠 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟™ 𝗗𝗗𝗢𝗦 𝗦𝗘𝗥𝗩𝗘𝗥
-", reply_markup=markup)
+    bot.reply_to(message, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗩𝗘𝗡𝗢𝗠 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟™ 𝗦𝗘𝗥𝗩𝗘𝗥", reply_markup=markup)
 
 @bot.message_handler(func=lambda message: message.text == "🤖 BOT SITTING")
 def bot_sitting(message):
