@@ -267,7 +267,7 @@ def handle_attack(message):
             time_since_last_attack = (datetime.datetime.now() - last_attack_time[user_id]).total_seconds()
             if time_since_last_attack < COOLDOWN_PERIOD:
                 remaining_cooldown = COOLDOWN_PERIOD - time_since_last_attack
-                response = f"⌛️ 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻 𝗶𝗻 𝗲𝗳𝗳𝗲𝗰𝘁 𝘄𝗮𝗶𝘁 {int(remaining_cooldown)} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀"
+                response = f"⌛️ 𝗥𝘂𝗸 𝗷𝗮 𝗯𝗵𝗮𝗶 𝗲𝗸 𝗮𝘁𝘁𝗮𝗰𝗸 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝗰𝗵𝗮𝗹 𝗿𝗮𝗵𝗮 𝗵𝗮𝗶 𝗶𝘁𝗻𝗮 {int(remaining_cooldown)} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 𝗸𝗲 𝗯𝗮𝗮𝗱 𝗱𝘂𝘀𝗿𝗮 𝗮𝘁𝘁𝗮𝗰𝗸 𝗹𝗮𝗴𝗮𝗴𝗮"
                 bot.reply_to(message, response)
                 return  # Prevent the attack from proceeding
 
