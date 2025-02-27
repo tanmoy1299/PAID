@@ -246,7 +246,7 @@ def process_genkey(call):
     key = create_random_key()
     bot.send_message(call.message.chat.id, f"✅ *Generated Key:* `{key}`\n⏳ Duration: {duration}", parse_mode="Markdown")
 
-COOLDOWN_PERIOD = 60  # 1-minute cooldown
+COOLDOWN_PERIOD = 120  # 1-minute cooldown
 @bot.message_handler(func=lambda message: message.text == "🚀 Attack")
 def handle_attack(message):
     user_id = str(message.chat.id)
